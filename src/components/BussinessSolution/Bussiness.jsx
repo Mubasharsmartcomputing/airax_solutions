@@ -6,7 +6,7 @@ export default function BusinessSolution() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <p className="text-[#00D254] font-poppins font-[500] text-[24px] mb-4">High-quality</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-[600] tracking-tight text-[#1D2130]">
+          <h2 className="text-center font-semibold text-3xl md:text-4xl lg:text-5xl text-[#1D2130] max-w-3xl font-poppins mx-auto leading-tight">
             We have the Best Solution
             <br />
             for your Business

@@ -9,7 +9,8 @@ const Footer = () => {
   className="w-full h-[12vh]"
   style={{
     background: "linear-gradient(10deg, rgba(215, 80, 225, 0.7), rgba(155, 255, 165, 0.83), rgba(174, 210, 255, 0.97), #C9D4EF, #CACFFA)",
-    filter: "blur(80px)"
+    filter: "blur(80px)",
+    
   }}
 ></div>
 
@@ -20,7 +21,7 @@ const Footer = () => {
       </div> */}
       
       {/* Footer Section */}
-      <footer className="bg-[#12141D] py-10 z-10 px-6 sm:px-12 ">
+      <footer className="bg-[#12141D] py-10 z-20 px-6 sm:px-12 ">
         <div className="max-w-7xl mx-auto">
           {/* Main Content */}
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">

@@ -4,7 +4,6 @@ import AppLayout from './components/layout/AppLayout'
 
 
 import Product from './pages/Product'
-import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import Home from './pages/Home'
@@ -31,10 +30,7 @@ const router=createBrowserRouter([
       path:'/about',
       element:<About/>,
     },
-    {
-      path:'pricing',
-      element:<Pricing/>,
-    },
+    
     {
       path:'contact',
       element:<Contact/>,
