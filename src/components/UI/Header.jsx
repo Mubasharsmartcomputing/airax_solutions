@@ -1,29 +1,23 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import { NavLink } from "react-router"
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Add scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
-      className={`w-full py-4 px-4 sm:px-6 bg-white sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "shadow-md" : ""}`}
+      className={`w-full py-4 px-4 sm:px-6 bg-white sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "shadow-md" : ""
+      }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
@@ -38,52 +32,29 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `text-[#1D2130] hover:text-gray-900 py-2 border-b-2 ${isActive ? "border-[#0eec9e]" : "border-transparent"}`
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `text-[#1D2130] hover:text-gray-900 py-2 border-b-2 ${isActive ? "border-[#0eec9e]" : "border-transparent"}`
-            }
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to="/product"
-            className={({ isActive }) =>
-              `text-[#1D2130] hover:text-gray-900 py-2 border-b-2 ${isActive ? "border-[#0eec9e]" : "border-transparent"}`
-            }
-          >
-            Product
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `text-[#1D2130] hover:text-gray-900 py-2 border-b-2 ${isActive ? "border-[#0eec9e]" : "border-transparent"}`
-            }
-          >
-            Contact
-          </NavLink>
+          {["Home", "About", "Product", "Contact"].map((item) => (
+            <NavLink
+              key={item}
+              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              className={({ isActive }) =>
+                `text-[#1D2130] hover:text-gray-900 py-2 border-b-2 ${
+                  isActive ? "border-[#0eec9e]" : "border-transparent"
+                }`
+              }
+            >
+              {item}
+            </NavLink>
+          ))}
 
           {/* Login Button (Desktop) */}
-        <div className="hidden md:block">
           <NavLink to="/login">
             <button className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105 w-[124px] h-[56px]">
               Login
             </button>
           </NavLink>
-        </div>
         </nav>
 
-        
-
-        {/* Mobile menu button */}
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -103,52 +74,30 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        } overflow-hidden`}
       >
         <nav className="mt-4 pt-4 border-t border-gray-100 px-2">
           <div className="flex flex-col space-y-4">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `text-[#1D2130] hover:text-gray-900 py-2 px-3 rounded-lg ${isActive ? "bg-gradient-to-r from-[#0eec9e]/10 to-[#40c5ed]/10" : ""}`
-              }
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `text-[#1D2130] hover:text-gray-900 py-2 px-3 rounded-lg ${isActive ? "bg-gradient-to-r from-[#0eec9e]/10 to-[#40c5ed]/10" : ""}`
-              }
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/product"
-              className={({ isActive }) =>
-                `text-[#1D2130] hover:text-gray-900 py-2 px-3 rounded-lg ${isActive ? "bg-gradient-to-r from-[#0eec9e]/10 to-[#40c5ed]/10" : ""}`
-              }
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Product
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `text-[#1D2130] hover:text-gray-900 py-2 px-3 rounded-lg ${isActive ? "bg-gradient-to-r from-[#0eec9e]/10 to-[#40c5ed]/10" : ""}`
-              }
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact
-            </NavLink>
+            {["Home", "About", "Product", "Contact"].map((item) => (
+              <NavLink
+                key={item}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                className={({ isActive }) =>
+                  `text-[#1D2130] hover:text-gray-900 py-2 px-3 rounded-lg ${
+                    isActive ? "bg-gradient-to-r from-[#0eec9e]/10 to-[#40c5ed]/10" : ""
+                  }`
+                }
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item}
+              </NavLink>
+            ))}
 
-            {/* Login Button (Mobile) */}
+            {/* Updated Login Button (Mobile) */}
             <NavLink to="/login" className="mt-2" onClick={() => setIsMobileMenuOpen(false)}>
-              <button className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium w-full py-3 rounded-[12px]">
+              <button className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium w-full py-3 px-4 rounded-[12px] block">
                 Login
               </button>
             </NavLink>
@@ -156,6 +105,5 @@ export default function Navbar() {
         </nav>
       </div>
     </header>
-  )
+  );
 }
-

@@ -60,12 +60,12 @@ export default function PricingSection() {
     <div className="w-full py-12 px-4 md:py-16 font-['Poppins']">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h1 className="text-center font-semibold text-3xl md:text-4xl lg:text-5xl text-[#1D2130] max-w-3xl mx-auto leading-tight">
+        <h1 className="text-start md:text-center font-semibold text-3xl md:text-4xl lg:text-5xl text-[#1D2130] max-w-3xl mx-auto leading-tight">
           Are you ready to grow your business with us?
         </h1>
 
         {/* Subtitle */}
-        <p className="text-center text-lg md:text-xl text-[#1D2130] mt-4 md:mt-6 mb-8 md:mb-16">
+        <p className="text-start md:text-center text-lg md:text-xl text-[#1D2130] mt-4 md:mt-6 mb-8 md:mb-16">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
         </p>
 

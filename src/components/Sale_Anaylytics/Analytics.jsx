@@ -3,12 +3,12 @@ import { BiBarChart, BiGroup, BiUser } from "react-icons/bi"
 // Main component
 function SalesAnalytics() {
   return (
-    <div className="mx-2 py-10 pt-auto md:py-10 md:pt-24 items-center justify-center">
+    <div className="mx-4 py-10 pt-auto md:py-10 md:pt-24 items-center justify-center">
       <div className="container mx-auto max-w-7xl grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p className="text-[#00D254] font-poppins font-[500] text-[24px] mb-4">Discover More</p>
 
-          <h1 className="text-[48px] font-[500] font-poppins text-[#1E1E1E] lg:text-5xl leading-tight">
+          <h1 className="text-[48px] font-[500] font-poppins text-[#1E1E1E] lg:text-5xl leading-tight ">
             Analyze your sales and marketing leads
           </h1>
 

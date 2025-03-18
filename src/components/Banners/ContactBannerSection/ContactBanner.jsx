@@ -35,7 +35,7 @@ export default function ContactHeroSection() {
         />
   
         {/* Content container */}
-        <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-4 text-center flex flex-col items-center justify-center">
+        <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-4 text-start md:text-center flex flex-col items-center justify-center">
           <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-[600] font-poppins tracking-tight text-gray-900">
           Get in Touch with Us Today
           </h1>

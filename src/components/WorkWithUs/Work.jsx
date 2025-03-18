@@ -7,7 +7,7 @@ export default function BusinessWork() {
         {/* Left Column */}
         <div className="space-y-4">
           <h2 className="text-emerald-500 font-[400] text-[28px]">Why should you work with us?</h2>
-          <h3 className="text-4xl font-[500] text-[#1D2130] lg:text-5xl leading-tight">
+          <h3 className="text-4xl text-start font-[500] text-[#1D2130] lg:text-5xl leading-tight">
             To upscale your business to the next level
           </h3>
           <p className="text-[16px] font-poppins font-[400] text-[#1D2130] lg:text-[16px] leading-tight">

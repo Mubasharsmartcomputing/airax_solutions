@@ -34,8 +34,8 @@ export default function HeroSection() {
         />
   
         {/* Content container */}
-        <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-4 text-center flex flex-col items-center justify-center">
-          <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-[600] font-poppins tracking-tight text-gray-900">
+        <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-4 text-start md:text-center flex flex-col items-center justify-center">
+          <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-[600] font-poppins text-start md:text-center tracking-tight text-[#1D2130]">
             The Best Software to Grow your Sales and Services
           </h1>
   

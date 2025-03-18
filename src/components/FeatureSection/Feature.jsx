@@ -1,10 +1,10 @@
 export default function FeaturesSection() {
     return (
-      <div className="mx-auto py-auto md:py-12 items-center justify-center font-['Poppins'] text-[#5F5F5F]">
+      <div className="mx-4 py-auto md:py-12 items-center justify-center font-['Poppins'] text-[#5F5F5F]">
         <div className="container mx-auto max-w-7xl  items-center ">
         {/* Features Section */}
-        <div className="container  mx-auto py-16 px-2">
-          <h2 className="text-[48px] font-[600] font-poppins text-[#1D2130] lg:text-5xl leading-tight text-center mb-16">Features</h2>
+        <div className="container text-start md:text-center mx-auto py-16 px-2">
+          <h2 className="text-[48px] font-[600] font-poppins text-[#1D2130] lg:text-5xl leading-tight mb-16">Features</h2>
   
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
@@ -62,7 +62,7 @@ export default function FeaturesSection() {
         <div className="bg-[#E2EBFC] py-16 px-4 md:px-6">
           <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+              <h2 className="text-[28px] md:text-[48px] font-[500] font-poppins text-[#1E1E1E] lg:text-5xl leading-tight mb-6">
                 STREAMLINE YOUR BUSINESS WITH OUR ERP DASHBOARD DESIGN
               </h2>
               <p className="mb-8">

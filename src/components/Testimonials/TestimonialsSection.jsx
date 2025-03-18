@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
   return (
     <div className="w-full py-16 px-4 font-['Poppins']">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center font-semibold text-3xl md:text-4xl lg:text-5xl text-[#1D2130] max-w-3xl font-poppins mx-auto leading-tight mb-12">
+        <h2 className="text-start md:text-center font-semibold text-3xl md:text-4xl lg:text-5xl text-[#1D2130] max-w-3xl font-poppins mx-auto leading-tight mb-12">
           The stunning results our customers have experienced
         </h2>
 
