@@ -57,16 +57,16 @@ export default function PricingSection() {
   ];
 
   return (
-    <div className="w-full py-12 px-4 md:py-16 font-['Poppins']">
+    <div className="w-full py-12 px-4 md:py-16 font-Poppins">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h1 className="text-start md:text-center font-semibold text-3xl md:text-4xl lg:text-5xl text-[#1D2130] max-w-3xl mx-auto leading-tight">
-          Are you ready to grow your business with us?
+        Choose your own way to create and bring ideas to life.
         </h1>
 
         {/* Subtitle */}
-        <p className="text-start md:text-center text-lg md:text-xl text-[#1D2130] mt-4 md:mt-6 mb-8 md:mb-16">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+        <p className="max-w-3xl mx-auto text-[16px] font-poppins font-[400] text-[#1D2130] lg:text-[16px] leading-[150%] text-start md:text-center mt-4 md:mt-6 mb-8 md:mb-16">
+        Find the perfect plan that fits your needs and budget. Whether you're a small team or a growing business, we have flexible options to help you succeed.
         </p>
 
         {/* Pricing Cards */}

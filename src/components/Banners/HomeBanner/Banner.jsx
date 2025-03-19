@@ -1,6 +1,6 @@
 export default function HeroSection() {
     return (
-      <div className="w-full relative bg-white flex flex-col items-center justify-center py-2 md:py-10 lg:py-2">
+      <div className="w-full relative bg-white flex flex-col items-center justify-center py-2 md:py-12 lg:py-2">
         {/* Gradient background with responsive positioning */}
         <div
           className="absolute hidden md:block"
@@ -34,14 +34,13 @@ export default function HeroSection() {
         />
   
         {/* Content container */}
-        <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-4 text-start md:text-center flex flex-col items-center justify-center">
+        <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-2 text-start md:text-center flex flex-col items-center justify-center">
           <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-[600] font-poppins text-start md:text-center tracking-tight text-[#1D2130]">
-            The Best Software to Grow your Sales and Services
+          Helping businesses succeed by solving real challenges.
           </h1>
   
           <p className="max-w-2xl mt-4 md:mt-6 font-poppins md:text-lg text-gray-600">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat.
+          Work smarter with AI that supports your team every step of the way. Stay in control, gain real-time insights, and make decisions with confidence all in one platform.
           </p>
   
           {/* Email form - made responsive */}

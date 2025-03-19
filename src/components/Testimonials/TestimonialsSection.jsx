@@ -51,7 +51,6 @@ export default function TestimonialsSection() {
     },
   ]
 
-  // Auto-rotate carousel every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % testimonials.length)
@@ -59,15 +58,14 @@ export default function TestimonialsSection() {
     return () => clearInterval(interval)
   }, [testimonials.length])
 
-  // Adjust visible testimonials based on screen width
   useEffect(() => {
     const updateVisibleCount = () => {
       if (window.innerWidth >= 1024) {
-        setVisibleCount(3) // Show 3 testimonials on large screens
+        setVisibleCount(3)
       } else if (window.innerWidth >= 768) {
-        setVisibleCount(2) // Show 2 on tablets
+        setVisibleCount(2)
       } else {
-        setVisibleCount(1) // Show 1 on mobile
+        setVisibleCount(1)
       }
     }
 
@@ -81,22 +79,21 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <div className="w-full py-16 px-4 font-['Poppins']">
+    <div className="w-full py-16 px-4 font-Poppins">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-start md:text-center font-semibold text-3xl md:text-4xl lg:text-5xl text-[#1D2130] max-w-3xl font-poppins mx-auto leading-tight mb-12">
           The stunning results our customers have experienced
         </h2>
 
-        {/* Carousel */}
         <div className="relative overflow-hidden">
           <div
             className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${activeIndex * (100 / visibleCount)}%)` }}
+            style={{ transform: `translateX(-${(activeIndex % testimonials.length) * (100 / visibleCount)}%)` }}
           >
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+            {testimonials.concat(testimonials[0]).map((testimonial, index) => (
+              <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
                 <div className="border border-gray-200 rounded-2xl p-6 md:p-8 flex flex-col items-center h-full">
-                  <p className="text-center text-gray-600 mb-6">{testimonial.text}</p>
+                  <p className="text-center font-Poppins text-gray-600 mb-6">{testimonial.text}</p>
                   <div className="w-16 h-16 rounded-full overflow-hidden mb-3">
                     <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
                   </div>
@@ -108,14 +105,13 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Pagination Dots */}
         <div className="flex justify-center mt-8 space-x-2">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => handleDotClick(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                activeIndex === index ? "bg-teal-500 scale-125" : "bg-gray-300"
+                activeIndex % testimonials.length === index ? "bg-teal-500 scale-125" : "bg-gray-300"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

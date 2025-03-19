@@ -32,7 +32,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          {["Home", "About", "Product", "Contact"].map((item) => (
+          {["Home","Product", "Contact"].map((item) => (
             <NavLink
               key={item}
               to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -80,7 +80,7 @@ export default function Navbar() {
       >
         <nav className="mt-4 pt-4 border-t border-gray-100 px-2">
           <div className="flex flex-col space-y-4">
-            {["Home", "About", "Product", "Contact"].map((item) => (
+            {["Home", "Product", "Contact"].map((item) => (
               <NavLink
                 key={item}
                 to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

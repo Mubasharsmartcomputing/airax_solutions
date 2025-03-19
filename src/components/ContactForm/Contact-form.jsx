@@ -44,8 +44,7 @@ export default function ContactForm() {
               Get in <span className="text-emerald-400">Touch</span>
             </h2>
             <p className="text-[16px] font-poppins font-[400] text-[#FFFFFF] mb-8">
-              Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit
-              netus.
+            Have a question or feedback? Reach out to us we’d love to hear from you!
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -155,13 +154,16 @@ export default function ContactForm() {
             </div>
           </div>
 
-          {/* Map Image */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-lg h-[570px] flex items-center justify-center">
-            <img 
-             src="/ContactImage/image.png" 
-              alt="Location Map" 
-              className="w-full h-full object-cover" 
-            />
+          {/* Map Container - Replaced Image with Google Maps iframe */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg h-[570px] w-full">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345083897!2d144.9617215!3d-37.8139151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cb954b1ce9%3A0xf187674ba9830e78!2sMelbourne%20VIC%20Australia!5e0!3m2!1sen!2sus!4v1647649644226!5m2!1sen!2sus" 
+              className="w-full h-full border-0" 
+              allowFullScreen="" 
+              loading="lazy"
+              title="Location Map"
+              aria-hidden="false"
+            ></iframe>
           </div>
         </div>
       </div>

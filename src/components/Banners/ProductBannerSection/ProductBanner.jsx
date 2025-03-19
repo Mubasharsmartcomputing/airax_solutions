@@ -37,12 +37,11 @@ export default function ProductHeroSection() {
         {/* Content container */}
         <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-4 text-start md:text-center flex flex-col items-center justify-center">
           <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-[600] font-poppins tracking-tight text-gray-900">
-          Discover the Perfect Product for You
+          The Right Solution, Made Just for You
           </h1>
   
           <p className="max-w-2xl mt-4 md:mt-6 font-poppins md:text-lg text-gray-600">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat.
+          Find simple and powerful solutions to make your work easier. Automate tasks, stay organized, and keep your team connected effortlessly.
           </p>
   
           {/* Email form - made responsive */}

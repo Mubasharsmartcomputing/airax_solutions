@@ -1,6 +1,62 @@
 import { motion } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 
 const ImpressionsSection = () => {
+  // Logo carousel state and refs
+  const [isAnimating, setIsAnimating] = useState(true);
+  const carouselRef = useRef(null);
+  
+  // Array of your logo data
+  const logos = [
+    { src: "/CompanyLogo/image1.png", alt: "Logo 1" },
+    { src: "/CompanyLogo/image2.png", alt: "Logo 2" },
+    { src: "/CompanyLogo/image3.png", alt: "Logo 3" },
+    { src: "/CompanyLogo/image4.png", alt: "Logo 4" },
+    { src: "/CompanyLogo/image5.png", alt: "Logo 5" },
+    { src: "/CompanyLogo/image6.png", alt: "Logo 6" },
+  ];
+
+  // Duplicate logos to create seamless loop effect
+  const extendedLogos = [...logos, ...logos];
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    let animationId;
+    let position = 0;
+
+    const animate = () => {
+      if (!isAnimating || !carousel) return;
+      
+      position -= 0.5; // Adjust speed here
+      
+      // Reset position when we've scrolled the width of our original logos
+      if (position <= -carousel.children[0].offsetWidth * logos.length) {
+        position = 0;
+      }
+      
+      carousel.style.transform = `translateX(${position}px)`;
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animationId = requestAnimationFrame(animate);
+    
+    // Pause animation when not in viewport or tab is inactive
+    const handleVisibilityChange = () => {
+      setIsAnimating(!document.hidden);
+    };
+    
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    
+    return () => {
+      cancelAnimationFrame(animationId);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [isAnimating, logos.length]);
+
+  // Pause on hover
+  const handleMouseEnter = () => setIsAnimating(false);
+  const handleMouseLeave = () => setIsAnimating(true);
+
   return (
     <section className="font-poppins w-full flex flex-col items-center justify-center">
       <div className="relative overflow-hidden max-w-7xl w-full px-4 sm:px-6 py-12 sm:py-16 my-8 sm:my-12 md:px-8 lg:px-12">
@@ -164,25 +220,32 @@ const ImpressionsSection = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl flex justify-around overflow-hidden items-center w-full h-20">
-        
-      <marquee behavior="scroll" direction="left" scrollamount="10">
-    <div className="flex space-x-10">
-      <img src="/CompanyLogo/image1.png" alt="Logo 1" className="w-[158px] h-[32px]" />
-      <img src="/CompanyLogo/image2.png" alt="Logo 2" className="w-[158px] h-[32px]" />
-      <img src="/CompanyLogo/image3.png" alt="Logo 3" className="w-[158px] h-[32px]" />
-      <img src="/CompanyLogo/image4.png" alt="Logo 4" className="w-[158px] h-[32px]" />
-      <img src="/CompanyLogo/image5.png" alt="Logo 5" className="w-[158px] h-[32px]" />
-      <img src="/CompanyLogo/image6.png" alt="Logo 6" className="w-[158px] h-[32px]" />
-    </div>
-  </marquee>
+      {/* Logo Carousel (integrated directly in the component) */}
+      <div className="max-w-7xl w-full overflow-hidden h-20 my-8">
+        <div
+          className="flex items-center"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div
+            ref={carouselRef}
+            className="flex space-x-10 transition-transform"
+            style={{ willChange: "transform" }}
+          >
+            {extendedLogos.map((logo, index) => (
+              <div key={index} className="flex-shrink-0">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="w-[158px] h-[32px] object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        
-
-     
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default ImpressionsSection
-
+export default ImpressionsSection;
