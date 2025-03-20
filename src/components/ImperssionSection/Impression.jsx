@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
+import { NavLink } from "react-router";
 
 const ImpressionsSection = () => {
   // Logo carousel state and refs
@@ -81,12 +82,13 @@ const ImpressionsSection = () => {
                 more conversions
               </h2>
               <p className="text-base sm:text-lg text-[#5F5F5F] font-poppins mb-6 sm:mb-8 max-w-lg">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua invidunt ut labore.
+              Partner with us to elevate your business beyond traditional metrics and build a system where every impression carries potential, and every potential becomes a conversion worth celebrating.
               </p>
-              <button className="bg-[#00D285] text-white font-medium py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-[#00B273] transition-colors">
+              <NavLink to="/contact">
+              <button className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium  hover:scale-105 inline-block py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg">
                 Get Free trial
               </button>
+              </NavLink>
             </div>
 
             {/* Right Side - Cards */}

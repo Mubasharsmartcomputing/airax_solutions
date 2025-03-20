@@ -1,4 +1,4 @@
-import { BiBarChart, BiGroup, BiUser } from "react-icons/bi"
+import { BiBarChart, BiGroup, BiUser } from "react-icons/bi";
 
 // Main component
 function SalesAnalytics() {
@@ -8,13 +8,13 @@ function SalesAnalytics() {
         <div className="space-y-6">
           <p className="text-[#00D254] font-poppins font-[500] text-[24px] mb-4 leading-[150%]">Discover More</p>
 
-          <h1 className="text-4xl text-start font-[600] text-[#1D2130] lg:text-[44px] leading-tight ">
-            Analyze your sales and marketing leads
+          <h1 className="max-w-3xl text-3xl sm:text-4xl text-start font-[600] text-[#1D2130] lg:text-[44px] leading-tight ">
+            Smarter Sales Insights, Better Business Growth
           </h1>
 
           <p className="max-w-lg">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua invidunt ut labore.
+            Get a clear view of your sales and marketing performance in real time. Track progress, understand trends, 
+            and make data-driven decisions to grow faster—without the guesswork.
           </p>
         </div>
 
@@ -22,24 +22,24 @@ function SalesAnalytics() {
           <FeatureItem
             icon={<BiBarChart className="w-6 h-6 text-emerald-500" />}
             title="Sales Tracking"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ksdh hdejin ejuei ."
+            description="Monitor your sales in real time, track trends, and find new opportunities to boost revenue."
           />
 
           <FeatureItem
             icon={<BiGroup className="w-6 h-6 text-emerald-500" />}
             title="Project Management"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ksd."
+            description="Keep your team aligned, track tasks effortlessly, and ensure smooth project execution."
           />
 
           <FeatureItem
             icon={<BiUser className="w-6 h-6 text-emerald-500" />}
-            title="Activity Report"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ksd."
+            title="Activity Reports"
+            description="Generate clear, insightful reports to measure performance and make better business decisions."
           />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // Feature item component
@@ -52,8 +52,7 @@ function FeatureItem({ icon, title, description }) {
         <p>{description}</p>
       </div>
     </div>
-  )
+  );
 }
 
-export default SalesAnalytics
-
+export default SalesAnalytics;

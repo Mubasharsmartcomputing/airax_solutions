@@ -9,42 +9,42 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      text: "Implementing this ERP solution transformed our operations virtually overnight. We've seen a 37% increase in productivity and cut administrative overhead by nearly half. The analytics dashboards provide the real-time insights I need to make confident business decisions. Worth every penny!",
       name: "Ron Wood",
       title: "CEO",
       image: "/testimonial/image1.png",
     },
     {
       id: 2,
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      text: "As a marketing professional, I need data that tells a story about our customers. This ERP platform delivers exactly that. We've optimized our campaigns based on integrated customer insights and increased our conversion rates by 42% in just three months. The ROI speaks for itself.",
       name: "Mark Mason",
       title: "Marketing Manager",
       image: "/testimonial/image2.png",
     },
     {
       id: 3,
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      text: "From a technical perspective, this is the most seamless ERP integration I've overseen in my 15-year career. The system architecture is robust yet flexible, and the API connectivity with our legacy systems was surprisingly straightforward. Our development team has become significantly more efficient.",
       name: "Sam Preston",
       title: "CTO",
       image: "/testimonial/image3.png",
     },
     {
       id: 4,
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      text: "The inventory management module has revolutionized our product development cycle. We now have complete visibility from concept to delivery, reducing our time-to-market by 28%. The customizable workflows adapt perfectly to our unique production processes.",
       name: "Emily Johnson",
       title: "Product Manager",
       image: "/testimonial/image4.png",
     },
     {
       id: 5,
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      text: "The user experience of this ERP platform stands miles above competitors. My team appreciates the intuitive interface and visual reporting features. We've eliminated countless spreadsheets and now collaborate in real-time, making our design process much more responsive to business needs.",
       name: "Lisa Chen",
       title: "Design Lead",
       image: "/testimonial/image5.png",
     },
     {
       id: 6,
-      text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      text: "The extensibility of this system is remarkable. We've been able to build custom modules that perfectly align with our unique business processes. The development environment is well-documented, and the support team has been responsive whenever we've needed guidance. It's a developer's dream.",
       name: "Michael Davis",
       title: "Senior Developer",
       image: "/testimonial/image6.png",
@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
             {testimonials.concat(testimonials[0]).map((testimonial, index) => (
               <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
                 <div className="border border-gray-200 rounded-2xl p-6 md:p-8 flex flex-col items-center h-full">
-                  <p className="text-center font-Poppins text-gray-600 mb-6">{testimonial.text}</p>
+                  <p className="text-center text-[16px] text-[#5F5F5F] font-poppins mb-6">{testimonial.text}</p>
                   <div className="w-16 h-16 rounded-full overflow-hidden mb-3">
                     <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
                   </div>

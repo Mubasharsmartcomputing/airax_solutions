@@ -8,6 +8,7 @@ import FeaturesSection from '../components/FeatureSection/Feature';
 import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
 import PricingSection from '../components/PaymentMethod/Payment';
 import ContactForm from '../components/ContactForm/Contact-form';
+import ProductServices from '../components/ServicesProduct/Services';
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
       <BusinessWork/>
       <ImpressionsSection/>
       <SalesAnalytics/>
-      <FeaturesSection/>
+      <ProductServices/>
+      {/* <FeaturesSection/> */}
       <PricingSection/>
       <TestimonialsSection/>
       <ContactForm/>
