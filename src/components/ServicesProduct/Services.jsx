@@ -3,46 +3,56 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const carouselItemsData = [
   {
-    buttonText: "Division Status Report",
-    title: "Capture live performance data",
+    buttonText: "Human Resource Management",
+    title: "Attract Top Talent and Drive Employee Success",
     description: [
-      "Custom dashboards streamline your data analysis and strategic decision-making process. Generate reports, create summaries, monitor progress, and gain comprehensive visibility across your entire organization at a high level.",
+      "Modern ERP revolutionizes workforce management by automating attendance tracking, payroll, and leave requests, eliminating manual errors. It streamlines recruitment, turning job postings into structured campaigns and ensuring smooth onboarding for new hires. This seamless integration enhances efficiency, compliance, and employee satisfaction, transforming HR into a strategic advantage.",
     ],
     linkText: "Get Free Trial",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image.png",
+    imageUrl: "/featureImg/image1.png",
   },
   {
-    buttonText: "Sales Metrics Dashboard",
-    title: "Customize your data visualization",
+    buttonText: "Supply Chain Management",
+    title: "Inventory & Warehouse Management",
     description: [
-      "Create customized reporting for your company using simple-to-edit dashboards without coding knowledge. Add visual details such as timelines and charts to maximize data presentation and keep tabs in real time on your work and results.",
+      "ERP tracks inventory levels, stock movements, and warehouse conditions in real-time. It prevents overstocking, reduces waste, and ensures products are available when needed. Better inventory control minimizes financial losses and boosts efficiency.",
       
     ],
     linkText: "Get Free Trial",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image.png",
+    imageUrl: "/featureImg/image2.png",
   },
   {
-    buttonText: "Chronological Record",
+    buttonText: "Customer Relationship Management",
     title: "Work smarter through strategic prioritization",
     description: [
-      "Our team is composed of passionate professionals with diverse backgrounds in marketing, design, and technology. Each member brings unique skills and perspectives, allowing us to craft comprehensive strategies that cater to our clients' specific needs.",
+      "ERP provides a visual representation of ongoing sales deals and revenue forecasts. Sales teams can monitor opportunities, set targets, and improve closing rates. Pipeline tracking helps businesses stay ahead in competitive markets.",
     ],
     linkText: "Get Free Trial",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image.png",
+    imageUrl: "/featureImg/image3.png",
   },
-//   {
-//     buttonText: "Careers at Airax Solutions",
-//     title: "Careers",
-//     description: [
-//       "We're always looking for great web developers and marketers. To apply, please send your resume and work samples to hello@primemarketingexperts.com and we'll be in touch.",
-//     ],
-//     linkText: "Learn More",
-//     linkHref: "/contact",
-//     imageUrl: "/public/featureImg/image.png",
-//   },
+  {
+     buttonText: "Production Planning",
+     title: "Production Scheduling & Work Order Management",
+    description: [
+      "This feature assigns production tasks based on demand and resource availability. It helps manufacturers reduce bottlenecks, optimize workflow, and meet deadlines. Efficient scheduling enhances production capacity and cost-effectiveness.",
+    ],
+     linkText: "Learn More",
+     linkHref: "/contact",
+     imageUrl: "/public/featureImg/image4.png",
+   },
+  {
+     buttonText: "Business Intelligence",
+     title: "Custom Analysis & Performance Tracking",
+    description: [
+      "Custom reports allow teams to dig deeper into specific areas, revealing patterns that might otherwise remain hidden. Comprehensive KPI tracking ensures everyone stays focused on the metrics that truly matter to your business success.",
+    ],
+     linkText: "Learn More",
+     linkHref: "/contact",
+     imageUrl: "/public/featureImg/image5.png",
+   },
 ];
 
 export default function ProductServices() {
@@ -76,10 +86,10 @@ export default function ProductServices() {
           ))}
         </div>
         <div className="relative flex justify-center flex-col items-center">
-          <div className="max-w-7xl overflow-hidden bg-[#E2EBFC] p-6">
+          <div className="max-w-7xl overflow-hidden p-6">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2 p-2 flex flex-col justify-center items-start">
-                <h3 className="text-3xl font-bold mb-4 text-gray-900">{carouselItemsData[activeIndex].title}</h3>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-[600] pb-6 font-poppins tracking-tight text-gray-900">{carouselItemsData[activeIndex].title}</h3>
                 {carouselItemsData[activeIndex].description.map((paragraph, idx) => (
                   <p key={idx} className="text-[16px] max-w-xl text-[#5F5F5F] font-poppins mb-4">
                     {paragraph}

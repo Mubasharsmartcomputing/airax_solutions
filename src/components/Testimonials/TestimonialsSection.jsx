@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState, useEffect } from "react"
 
@@ -9,42 +9,42 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      text: "Implementing this ERP solution transformed our operations virtually overnight. We've seen a 37% increase in productivity and cut administrative overhead by nearly half. The analytics dashboards provide the real-time insights I need to make confident business decisions. Worth every penny!",
+      text: "Real-time insights boosted productivity 37%, halved costs. Best decision for our growing company.",
       name: "Ron Wood",
       title: "CEO",
       image: "/testimonial/image1.png",
     },
     {
       id: 2,
-      text: "As a marketing professional, I need data that tells a story about our customers. This ERP platform delivers exactly that. We've optimized our campaigns based on integrated customer insights and increased our conversion rates by 42% in just three months. The ROI speaks for itself.",
+      text: "Marketing transformed: data-driven campaigns improved conversions dramatically within just three short months.",
       name: "Mark Mason",
       title: "Marketing Manager",
       image: "/testimonial/image2.png",
     },
     {
       id: 3,
-      text: "From a technical perspective, this is the most seamless ERP integration I've overseen in my 15-year career. The system architecture is robust yet flexible, and the API connectivity with our legacy systems was surprisingly straightforward. Our development team has become significantly more efficient.",
+      text: "Airax streamlined everything. Productivity soared, costs plummeted, and decisions became crystal clear.",
       name: "Sam Preston",
       title: "CTO",
       image: "/testimonial/image3.png",
     },
     {
       id: 4,
-      text: "The inventory management module has revolutionized our product development cycle. We now have complete visibility from concept to delivery, reducing our time-to-market by 28%. The customizable workflows adapt perfectly to our unique production processes.",
+      text: "Our efficiency jumped 28%. Administrative burden? Halved! Real-time analytics revolutionized our decision-making.",
       name: "Emily Johnson",
       title: "Product Manager",
       image: "/testimonial/image4.png",
     },
     {
       id: 5,
-      text: "The user experience of this ERP platform stands miles above competitors. My team appreciates the intuitive interface and visual reporting features. We've eliminated countless spreadsheets and now collaborate in real-time, making our design process much more responsive to business needs.",
+      text: "Intuitive interface replaced endless spreadsheets. Design team collaborates seamlessly now, improving adaptability.",
       name: "Lisa Chen",
       title: "Design Lead",
       image: "/testimonial/image5.png",
     },
     {
       id: 6,
-      text: "The extensibility of this system is remarkable. We've been able to build custom modules that perfectly align with our unique business processes. The development environment is well-documented, and the support team has been responsive whenever we've needed guidance. It's a developer's dream.",
+      text: "Custom modules perfectly match our workflow. Support team responds quickly, making development painless.",
       name: "Michael Davis",
       title: "Senior Developer",
       image: "/testimonial/image6.png",
