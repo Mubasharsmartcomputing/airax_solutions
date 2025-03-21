@@ -69,7 +69,7 @@ export default function ProductServices() {
   return (
     <div className="w-full  px-2 md:pt-10 font-Poppins text-[#1D2130] mx-auto">
       <div className="max-w-7xl justify-center items-center mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold md:text-center mb-8 text-[#1D2130]">
+        <h2 className="text-3xl sm:text-4xl px-2 lg:text-5xl font-bold md:text-center mb-8 text-[#1D2130]">
         Features
         </h2>
         <div className="hidden md:flex items-center justify-center mb-8 flex-wrap">
@@ -86,7 +86,7 @@ export default function ProductServices() {
           ))}
         </div>
         <div className="relative flex justify-center flex-col items-center">
-          <div className="max-w-7xl overflow-hidden p-6">
+          <div className="max-w-7xl overflow-hidden p-2 md:p-2">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2 p-2 flex flex-col justify-center items-start">
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-[600] pb-6 font-poppins tracking-tight text-gray-900">{carouselItemsData[activeIndex].title}</h3>
