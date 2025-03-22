@@ -3,15 +3,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const carouselItemsData = [
   {
-    buttonText: "Human Resource Management",
-    title: "Attract Top Talent and Drive Employee Success",
-    description: [
-      "Modern ERP revolutionizes workforce management by automating attendance tracking, payroll, and leave requests, eliminating manual errors. It streamlines recruitment, turning job postings into structured campaigns and ensuring smooth onboarding for new hires. This seamless integration enhances efficiency, compliance, and employee satisfaction, transforming HR into a strategic advantage.",
-    ],
-    linkText: "Get Free Trial",
+    buttonText: "Business Intelligence",
+    title: "Custom Analysis & Performance Tracking",
+   description: [
+     "Custom reports allow teams to dig deeper into specific areas, revealing patterns that might otherwise remain hidden. Comprehensive KPI tracking ensures everyone stays focused on the metrics that truly matter to your business success.",
+   ],
+    linkText: "Learn More",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image1.png",
+    imageUrl: "/public/featureImg/image5.png",
   },
+  
   {
     buttonText: "Supply Chain Management",
     title: "Inventory & Warehouse Management",
@@ -43,17 +44,18 @@ const carouselItemsData = [
      linkHref: "/contact",
      imageUrl: "/public/featureImg/image4.png",
    },
-  {
-     buttonText: "Business Intelligence",
-     title: "Custom Analysis & Performance Tracking",
+   {
+    buttonText: "Human Resource Management",
+    title: "Attract Top Talent and Drive Employee Success",
     description: [
-      "Custom reports allow teams to dig deeper into specific areas, revealing patterns that might otherwise remain hidden. Comprehensive KPI tracking ensures everyone stays focused on the metrics that truly matter to your business success.",
+      "Modern ERP revolutionizes workforce management by automating attendance tracking, payroll, and leave requests, eliminating manual errors. It streamlines recruitment, turning job postings into structured campaigns and ensuring smooth onboarding for new hires. This seamless integration enhances efficiency, compliance, and employee satisfaction, transforming HR into a strategic advantage.",
     ],
-     linkText: "Learn More",
-     linkHref: "/contact",
-     imageUrl: "/public/featureImg/image5.png",
-   },
+    linkText: "Get Free Trial",
+    linkHref: "/contact",
+    imageUrl: "/featureImg/image1.png",
+  },
 ];
+
 
 export default function ProductServices() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -67,9 +69,9 @@ export default function ProductServices() {
   };
 
   return (
-    <div className="w-full  px-2 md:pt-10 font-Poppins text-[#1D2130] mx-auto">
+    <div className="w-full  px-2 py-10 md:py-16 font-Poppins text-[#1D2130] mx-auto">
       <div className="max-w-7xl justify-center items-center mx-auto">
-        <h2 className="text-3xl sm:text-4xl px-2 lg:text-5xl font-bold md:text-center mb-8 text-[#1D2130]">
+        <h2 className="text-3xl sm:text-4xl px-4 lg:text-5xl font-bold md:text-center mb-auto md:mb-8 text-[#1D2130]">
         Features
         </h2>
         <div className="hidden md:flex items-center justify-center mb-8 flex-wrap">
@@ -89,7 +91,7 @@ export default function ProductServices() {
           <div className="max-w-7xl overflow-hidden p-2 md:p-2">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2 p-2 flex flex-col justify-center items-start">
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-[600] pb-6 font-poppins tracking-tight text-gray-900">{carouselItemsData[activeIndex].title}</h3>
+                <h3 className="text-3xl sm:text-4xl md:text-[44px] font-[600] pb-6 font-poppins tracking-tight text-gray-900">{carouselItemsData[activeIndex].title}</h3>
                 {carouselItemsData[activeIndex].description.map((paragraph, idx) => (
                   <p key={idx} className="text-[16px] max-w-xl text-[#5F5F5F] font-poppins mb-4">
                     {paragraph}

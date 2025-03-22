@@ -1,10 +1,10 @@
-
-
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [visibleCount, setVisibleCount] = useState(1)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+  const carouselRef = useRef(null)
 
   const testimonials = [
     {
@@ -51,12 +51,20 @@ export default function TestimonialsSection() {
     },
   ]
 
+  // Create an array with cloned items for infinite scrolling
+  // We clone testimonials at the beginning and end to create the illusion of infinity
+  const infiniteTestimonials = [
+    ...testimonials.slice(testimonials.length - visibleCount),
+    ...testimonials,
+    ...testimonials.slice(0, visibleCount)
+  ]
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % testimonials.length)
+      goToNext()
     }, 5000)
     return () => clearInterval(interval)
-  }, [testimonials.length])
+  }, [activeIndex, testimonials.length])
 
   useEffect(() => {
     const updateVisibleCount = () => {
@@ -74,9 +82,42 @@ export default function TestimonialsSection() {
     return () => window.removeEventListener("resize", updateVisibleCount)
   }, [])
 
+  // Add a special effect for the infinite loop
+  useEffect(() => {
+    if (isTransitioning) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false)
+        
+        // If we've reached the end clone, jump to the real items
+        if (activeIndex >= testimonials.length) {
+          setActiveIndex(0)
+        }
+        // If we've reached the beginning clone, jump to the end
+        else if (activeIndex < 0) {
+          setActiveIndex(testimonials.length - 1)
+        }
+      }, 700) // Match this to your transition duration
+      
+      return () => clearTimeout(timer)
+    }
+  }, [isTransitioning, activeIndex, testimonials.length])
+
+  const goToNext = () => {
+    setIsTransitioning(true)
+    setActiveIndex(prev => prev + 1)
+  }
+
+  const goToPrev = () => {
+    setIsTransitioning(true)
+    setActiveIndex(prev => prev - 1)
+  }
+
   const handleDotClick = (index) => {
     setActiveIndex(index)
   }
+
+  // Calculate the actual display index considering the cloned items
+  const displayIndex = activeIndex + visibleCount
 
   return (
     <div className="w-full py-16 px-4 font-Poppins">
@@ -87,11 +128,15 @@ export default function TestimonialsSection() {
 
         <div className="relative overflow-hidden">
           <div
+            ref={carouselRef}
             className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${(activeIndex % testimonials.length) * (100 / visibleCount)}%)` }}
+            style={{ 
+              transform: `translateX(-${displayIndex * (100 / visibleCount)}%)`,
+              transition: isTransitioning ? 'transform 700ms ease-in-out' : 'none'
+            }}
           >
-            {testimonials.concat(testimonials[0]).map((testimonial, index) => (
-              <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+            {infiniteTestimonials.map((testimonial, index) => (
+              <div key={`testimonial-${testimonial.id}-${index}`} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
                 <div className="border border-gray-200 rounded-2xl p-6 md:p-8 flex flex-col items-center h-full">
                   <p className="text-center text-[16px] text-[#5F5F5F] font-poppins mb-6">{testimonial.text}</p>
                   <div className="w-16 h-16 rounded-full overflow-hidden mb-3">

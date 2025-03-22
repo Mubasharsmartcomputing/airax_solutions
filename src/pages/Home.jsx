@@ -14,11 +14,12 @@ const Home = () => {
   return (
     <div>
       <HeroSection/>
-      <BusinessSolution/>
-      <BusinessWork/>
-      <ImpressionsSection/>
       <SalesAnalytics/>
       <ProductServices/>
+      <ImpressionsSection/>
+      <BusinessSolution/>
+      <BusinessWork/>
+      
       {/* <FeaturesSection/> */}
       <PricingSection/>
       <TestimonialsSection/>

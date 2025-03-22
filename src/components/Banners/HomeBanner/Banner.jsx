@@ -36,11 +36,11 @@ export default function HeroSection() {
         {/* Content container */}
         <div className="relative z-10 min-h-[40vh] md:min-h-[50vh] px-2 text-start md:text-center flex flex-col items-center justify-center">
           <h1 className="max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-[600] font-poppins text-start md:text-center tracking-tight text-[#1D2130]">
-          Helping businesses succeed by solving real challenges.
+          ERP Solutions Solving Real Business Challenges.
           </h1>
   
           <p className="max-w-2xl mt-4 md:mt-6 font-poppins md:text-lg text-gray-600">
-          Work smarter with AI that supports your team every step of the way. Stay in control, gain real-time insights, and make decisions with confidence all in one platform.
+          Designed to overcome operational hurdles with accurate analytics and complete oversight. Discover a powerful platform that drives business excellence and growth.
           </p>
   
           {/* Email form - made responsive */}
