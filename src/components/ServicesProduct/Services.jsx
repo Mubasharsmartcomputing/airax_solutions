@@ -42,7 +42,7 @@ const carouselItemsData = [
     ],
      linkText: "Learn More",
      linkHref: "/contact",
-     imageUrl: "/public/featureImg/image4.png",
+     imageUrl: "/featureImg/image4.png",
    },
    {
     buttonText: "Human Resource Management",
