@@ -10,7 +10,7 @@ const carouselItemsData = [
    ],
     linkText: "Learn More",
     linkHref: "/contact",
-    imageUrl: "/public/featureImg/image5.png",
+    imageUrl: "/featureImg/image5.png",
   },
   
   {
