@@ -1,10 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router";
+import { 
+  FaCalculator, 
+  FaClock, 
+  FaMoneyBillWave, 
+  FaUserTie, 
+  FaChartLine, 
+  FaIndustry 
+} from "react-icons/fa";
 
 const ImpressionsSection = () => {
   // Logo carousel state and refs
   const [isAnimating, setIsAnimating] = useState(true);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const carouselRef = useRef(null);
   
   // Array of your logo data
@@ -17,43 +26,43 @@ const ImpressionsSection = () => {
     { src: "/CompanyLogo/image6.png", alt: "Logo 6" },
   ];
 
-  // Card data with updated content
-  const cards = [
+  // Card data with updated content and icons
+  const businessSolutions = [
     {
       title: "Smart Accounting Management",
       description:
-        "Maintaining accurate financial records is crucial—not just for statutory compliance, but for a clear, real-time view of your organization's financial health. With ERPNext, a fully open-source ERP, you can streamline compliance, reduce manual spreadsheet efforts, and minimize reliance on external auditors. ERPNext transforms accounting by seamlessly integrating with inventory, manufacturing, HR, and more—turning your ERP into a centralized financial hub.",
-      image: "/impressive/image1.png",
+        "Maintaining accurate financial records is crucial—not just for statutory compliance, but for a clear, real-time view of your organization's financial health. With ERPNext, a fully open-source ERP, you can streamline compliance, reduce manual spreadsheet efforts, and minimize reliance on external auditors.",
+      icon: <FaCalculator className="text-4xl text-green-500" />,
     },
     {
       title: "Time & Attendance Tracking",
       description:
-        "Boost employee productivity with our advanced Time & Attendance Management Module. This user-friendly system captures accurate, real-time attendance data that's accessible anywhere. Track attendance patterns, monitor punctuality, and generate comprehensive reports from any device—mobile, tablet, or desktop. Simplify your attendance management and focus on what matters most: your business growth.",
-      image: "/impressive/image2.png",
+        "Boost employee productivity with our advanced Time & Attendance Management Module. This user-friendly system captures accurate, real-time attendance data that's accessible anywhere. Track attendance patterns, monitor punctuality, and generate comprehensive reports from any device.",
+      icon: <FaClock className="text-4xl text-green-500" />,
     },
     {
       title: "Streamlined Payroll System",
       description:
-        "Simplify even the most complex payroll processes with our FlowHCM Payroll Module. Designed to adapt to local tax structures, company policies, and statutory requirements, our system ensures accurate and timely salary disbursements with just one click. By integrating seamlessly with Attendance and Leave management modules, we eliminate calculation errors and reduce processing time by up to 80%.",
-      image: "/impressive/image3.png",
+        "Simplify even the most complex payroll processes with our FlowHCM Payroll Module. Designed to adapt to local tax structures, company policies, and statutory requirements, our system ensures accurate and timely salary disbursements with just one click.",
+      icon: <FaMoneyBillWave className="text-4xl text-green-500" />,
     },
     {
       title: "Efficient Recruitment Platform",
       description:
-        "Transform your hiring process with our Recruitment Management Software. Stop drowning in applications and start finding the right talent efficiently. Our platform streamlines every step—from posting job openings and screening candidates to scheduling interviews and tracking applicant progress. Reduce hiring time by 40% while building a stronger talent pipeline for your organization's future needs.",
-      image: "/impressive/image4.png",
+        "Transform your hiring process with our Recruitment Management Software. Stop drowning in applications and start finding the right talent efficiently. Our platform streamlines every step—from posting job openings and screening candidates to scheduling interviews and tracking applicant progress.",
+      icon: <FaUserTie className="text-4xl text-green-500" />,
     },
     {
       title: "Employee Performance Evaluation",
       description:
-        "Elevate your performance appraisal process with our Performance Management Software. This powerful module lets you create customized appraisal cycles based on your company's unique structure—whether department-wise or by business unit. Define review periods, set clear objectives, and establish measurable KPIs tailored to your specific requirements, all while ensuring transparent feedback channels for continuous improvement.",
-      image: "/impressive/image1.png",
+        "Elevate your performance appraisal process with our Performance Management Software. This powerful module lets you create customized appraisal cycles based on your company's unique structure—whether department-wise or by business unit.",
+      icon: <FaChartLine className="text-4xl text-green-500" />,
     },
     {
       title: "Manufacturing Visibility Solutions",
       description:
-        "Gain complete visibility and traceability in your manufacturing processes with ERPNext. Track multi-level BOMs for both finished goods and sub-assemblies while seamlessly integrating with sales and inventory management. Stay ahead by anticipating production needs, pre-planning production queues, and ensuring timely raw material requisitions. Our system guarantees accurate valuation and comprehensive quality checks before completing the manufacturing cycle.",
-      image: "/header.png",
+        "Gain complete visibility and traceability in your manufacturing processes with ERPNext. Track multi-level BOMs for both finished goods and sub-assemblies while seamlessly integrating with sales and inventory management.",
+      icon: <FaIndustry className="text-4xl text-green-500" />,
     },
   ];
 
@@ -111,22 +120,46 @@ const ImpressionsSection = () => {
           }}
         ></div>
         
-        {/* Expanding Cards Grid */}
-        <div className="container mx-auto p-4">
+        {/* Cards with new animation style */}
+        <div className="container mx-auto p-2 md:p-4">
           <h1 className="text-3xl sm:text-4xl md:text-[44px] font-[600] font-poppins text-gray-900 leading-tight mb-6 text-start md:text-center">Business Management Solutions</h1>
           <p className="text-start md:text-center text-lg mb-10 max-w-3xl mx-auto">Discover our comprehensive suite of business management tools designed to optimize your operations and drive growth.</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cards.map((card, index) => (
-              <ExpandingCard
-                key={index}
-                title={card.title}
-                description={card.description}
-                image={card.image}
-                index={index}
-              />
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 max-w-6xl mx-auto">
+            {businessSolutions.map((solution, idx) => (
+              <li
+                key={idx}
+                className="relative block p-2 h-full w-full list-none"
+                onMouseEnter={() => setHoveredIndex(idx)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <AnimatePresence>
+                  {hoveredIndex === idx && (
+                    <motion.span
+                      className="absolute inset-0 h-full w-full bg-[#C9D4EF] block rounded-3xl z-10 shadow-lg"
+                      layoutId="hoverBackground"
+                      initial={{ opacity: 0 }}
+                      animate={{
+                        opacity: 1,
+                        transition: { duration: 0.15 },
+                      }}
+                      exit={{
+                        opacity: 0,
+                        transition: { duration: 0.15, delay: 0.2 },
+                      }}
+                    />
+                  )}
+                </AnimatePresence>
+                <div className="rounded-2xl h-full w-full p-auto md:p-4 overflow-hidden bg-white border border-gray-200 hover:border-green-300 relative z-20 shadow-sm">
+                  <div className="relative z-50 p-4">
+                    <div className="flex justify-center mb-5">{solution.icon}</div>
+                    <h4 className="text-gray-800 font-bold text-xl tracking-wide mt-4 text-center">{solution.title}</h4>
+                    <p className="mt-6 text-gray-600 tracking-wide leading-relaxed text-sm">{solution.description}</p>
+                  </div>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
 
@@ -155,67 +188,6 @@ const ImpressionsSection = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-// Expanding Card Component with Framer Motion
-const ExpandingCard = ({ title, description, image, index }) => {
-  // Set of icons for cards
-  const cardIcons = [
-    "💼", // Accounting
-    "⏱️", // Time & Attendance
-    "💰", // Payroll
-    "🔍", // Recruitment
-    "📈", // Performance
-    "🏭", // Manufacturing
-  ];
-
-  return (
-    <motion.div
-      className="relative overflow-hidden h-[300px] rounded-lg shadow-md"
-      whileHover={{ scale: 1.02 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
-    >
-      <div className="relative h-full">
-        <img
-          src={image || "/placeholder.svg"}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute top-3 right-3 bg-white bg-opacity-90 rounded-full p-2 shadow-sm">
-          <span className="text-xl" role="img" aria-label="Icon">
-            {cardIcons[index % cardIcons.length]}
-          </span>
-        </div>
-      </div>
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-95 overflow-hidden"
-        initial={{ height: "100px" }}
-        whileHover={{ height: "70%" }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-      >
-        <div className="p-4">
-          <h2 className="text-xl font-semibold mb-2">{title}</h2>
-          <motion.div
-            className="overflow-hidden"
-            initial={{ maxHeight: "40px" }}
-            whileHover={{ maxHeight: "calc(100% - 40px)" }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            <p className="text-gray-700">{description}</p>
-            <motion.button
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium"
-              whileHover={{ backgroundColor: "#2563EB" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More
-            </motion.button>
-          </motion.div>
-        </div>
-      </motion.div>
-    </motion.div>
   );
 };
 
