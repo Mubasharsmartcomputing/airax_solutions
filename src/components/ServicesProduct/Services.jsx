@@ -22,7 +22,7 @@ const carouselItemsData = [
     ],
     linkText: "Get Free Trial",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image2.png",
+    imageUrl: "/featureImg/image5.png",
   },
   {
     buttonText: "Customer Relationship Management",
