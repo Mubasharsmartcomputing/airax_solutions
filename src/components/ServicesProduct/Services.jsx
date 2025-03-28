@@ -3,6 +3,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const carouselItemsData = [
   {
+    buttonText: "Human Resource Management",
+    title: "Attract Top Talent and Drive Employee Success",
+    description: [
+      "Modern ERP revolutionizes workforce management by automating attendance tracking, payroll, and leave requests, eliminating manual errors. It streamlines recruitment, turning job postings into structured campaigns and ensuring smooth onboarding for new hires. This seamless integration enhances efficiency, compliance, and employee satisfaction, transforming HR into a strategic advantage.",
+    ],
+    linkText: "Get Free Trial",
+    linkHref: "/contact",
+    imageUrl: "/featureImg/image5.png",
+  },
+  {
     buttonText: "Customer Relationship Management",
     title: "Work smarter through strategic prioritization",
     description: [
@@ -11,16 +21,6 @@ const carouselItemsData = [
     linkText: "Get Free Trial",
     linkHref: "/contact",
     imageUrl: "/featureImg/image3.png",
-  },
-  {
-    buttonText: "Business Intelligence",
-    title: "Custom Analysis & Performance Tracking",
-   description: [
-     "Custom reports allow teams to dig deeper into specific areas, revealing patterns that might otherwise remain hidden. Comprehensive KPI tracking ensures everyone stays focused on the metrics that truly matter to your business success.",
-   ],
-    linkText: "Learn More",
-    linkHref: "/contact",
-    imageUrl: "/featureImg/image4.png",
   },
   
   {
@@ -46,15 +46,16 @@ const carouselItemsData = [
      imageUrl: "/featureImg/image1.png",
    },
    {
-    buttonText: "Human Resource Management",
-    title: "Attract Top Talent and Drive Employee Success",
-    description: [
-      "Modern ERP revolutionizes workforce management by automating attendance tracking, payroll, and leave requests, eliminating manual errors. It streamlines recruitment, turning job postings into structured campaigns and ensuring smooth onboarding for new hires. This seamless integration enhances efficiency, compliance, and employee satisfaction, transforming HR into a strategic advantage.",
-    ],
-    linkText: "Get Free Trial",
+    buttonText: "Business Intelligence",
+    title: "Custom Analysis & Performance Tracking",
+   description: [
+     "Custom reports allow teams to dig deeper into specific areas, revealing patterns that might otherwise remain hidden. Comprehensive KPI tracking ensures everyone stays focused on the metrics that truly matter to your business success.",
+   ],
+    linkText: "Learn More",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image5.png",
+    imageUrl: "/featureImg/image4.png",
   },
+   
 ];
 
 
