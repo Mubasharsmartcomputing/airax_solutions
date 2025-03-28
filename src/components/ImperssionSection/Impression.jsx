@@ -125,7 +125,7 @@ const ImpressionsSection = () => {
           <h1 className="text-3xl sm:text-4xl md:text-[44px] font-[600] font-poppins text-gray-900 leading-tight mb-6 text-start md:text-center">Business Management Solutions</h1>
           <p className="text-start md:text-center text-lg mb-10 max-w-3xl mx-auto">Discover our comprehensive suite of business management tools designed to optimize your operations and drive growth.</p>
           
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 max-w-6xl mx-auto">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 cursor-pointer gap-6 py-10 max-w-6xl mx-auto">
             {businessSolutions.map((solution, idx) => (
               <li
                 key={idx}

@@ -49,7 +49,7 @@ export default function Navbar() {
 
           {/* Login Button (Desktop) */}
           <NavLink to="/login">
-            <button className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105 w-[124px] h-[46px]">
+            <button className="bg-gradient-to-r cursor-pointer from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105 w-[124px] h-[46px]">
               Login
             </button>
           </NavLink>

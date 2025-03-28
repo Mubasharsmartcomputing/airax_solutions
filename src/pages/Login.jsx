@@ -100,7 +100,7 @@ function LoginPage() {
               <div className="text-right">
                 <Link
                   to="/forgot-password"
-                  className="text-[#00D285] hover:text-[#00D285]/80 text-sm"
+                  className="text-[#00D285] cursor-pointer hover:text-[#00D285]/80 text-sm"
                 >
                   Forgot password?
                 </Link>
@@ -109,7 +109,7 @@ function LoginPage() {
               <div className="pt-2 sm:pt-4">
                 <button
                   type="submit"
-                  className="w-full py-3 sm:py-4 px-4 bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105"
+                  className="w-full py-3 sm:py-4 px-4 cursor-pointer bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105"
                 >
                   Log in
                 </button>
@@ -117,7 +117,7 @@ function LoginPage() {
 
               <p className="text-center text-[#666666] text-sm sm:text-base pt-2">
                 Don't have an account? {" "}
-                <Link to="/signup" className="text-[#00D285] hover:text-[#00D285]/80">
+                <Link to="/signup" className="text-[#00D285] cursor-pointer hover:text-[#00D285]/80">
                   Signup
                 </Link>
               </p>

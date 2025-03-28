@@ -116,7 +116,7 @@ function SignupPage() {
               <div className="pt-2 sm:pt-4">
                 <button
                   type="submit"
-                  className="w-full py-3 sm:py-4 px-4 bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105"
+                  className="w-full py-3 sm:py-4 px-4 bg-gradient-to-r cursor-pointer from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105"
                 >
                   Sign Up
                 </button>
