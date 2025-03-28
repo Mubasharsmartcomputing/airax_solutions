@@ -10,7 +10,7 @@ const carouselItemsData = [
    ],
     linkText: "Learn More",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image5.png",
+    imageUrl: "/featureImg/image4.png",
   },
   
   {
@@ -22,7 +22,7 @@ const carouselItemsData = [
     ],
     linkText: "Get Free Trial",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image5.png",
+    imageUrl: "/featureImg/image2.png",
   },
   {
     buttonText: "Customer Relationship Management",

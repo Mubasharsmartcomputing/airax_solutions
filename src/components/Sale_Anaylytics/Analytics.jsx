@@ -37,7 +37,8 @@ function SalesAnalytics() {
         {/* Right side image - now visible on all screen sizes */}
         <div className="mt-auto md:mt-0 mb-8 px-2 md:px-auto">
           <img 
-            src="/Sales/image.png" 
+            src="/Sales/image.jpg
+            " 
             alt="Sales Features" 
             className="w-full h-auto rounded-lg shadow-lg object-cover mx-auto max-w-md md:max-w-full"
           />

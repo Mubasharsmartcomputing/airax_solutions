@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin, FaHome, FaInfoCircle, FaTools, FaPhone } from "react-icons/fa";
 import { PiThreadsLogoFill } from "react-icons/pi";
 import { MdProductionQuantityLimits } from "react-icons/md";
@@ -30,14 +30,15 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between gap-8">
             {/* Left Section (Logo & Description) */}
             <div className="text-white text-start md:text-left w-full md:w-1/3 max-w-md">
-              <div className="flex items-center justify-start md:justify-start">
-                <Link to="/" className="text-2xl font-bold text-emerald-500 flex items-center">
-                  <span className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] w-8 h-8 rounded-lg mr-2 flex items-center justify-center text-white">
-                    B
-                  </span>
-                  Bizmate
-                </Link>
-              </div>
+            <div className="flex items-center">
+          <NavLink to="/" className="text-2xl font-bold text-emerald-500 flex items-center">
+          <img
+        src="/CompanyLogo/image.jpg"
+        alt="Airax Logo"
+        className="h-12" // Adjust size as needed
+      />
+      </NavLink>
+        </div>
               <p className="mt-4 font-poppins text-gray-300">
               Bizmate is a powerful ERP solution that simplifies business operations, connects workflows, and provides real-time insights to support growth and efficiency.
               </p>

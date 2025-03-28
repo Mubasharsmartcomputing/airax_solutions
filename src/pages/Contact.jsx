@@ -6,7 +6,7 @@ import ContactHeroSection from '../components/Banners/ContactBannerSection/Conta
 const Contact = () => {
     return (
         <div>
-            <ContactHeroSection/>
+            {/* <ContactHeroSection/> */}
             <BusinessSolution/>
            <ContactForm/>
           

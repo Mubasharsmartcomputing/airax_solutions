@@ -23,12 +23,13 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center">
           <NavLink to="/" className="text-2xl font-bold text-emerald-500 flex items-center">
-            <span className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] w-8 h-8 rounded-lg mr-2 flex items-center justify-center text-white">
-              B
-            </span>
-            Bizmate
-          </NavLink>
-        </div>
+          <img
+        src="/CompanyLogo/image.jpg"
+        alt="Airax Logo"
+        className="h-12" // Adjust size as needed
+      />
+      </NavLink>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
@@ -48,7 +49,7 @@ export default function Navbar() {
 
           {/* Login Button (Desktop) */}
           <NavLink to="/login">
-            <button className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105 w-[124px] h-[56px]">
+            <button className="bg-gradient-to-r from-[#0eec9e] to-[#40c5ed] hover:bg-emerald-600 text-white font-medium rounded-[12px] transition-transform hover:scale-105 w-[124px] h-[46px]">
               Login
             </button>
           </NavLink>
