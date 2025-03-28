@@ -3,6 +3,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const carouselItemsData = [
   {
+    buttonText: "Customer Relationship Management",
+    title: "Work smarter through strategic prioritization",
+    description: [
+      "ERP provides a visual representation of ongoing sales deals and revenue forecasts. Sales teams can monitor opportunities, set targets, and improve closing rates. Pipeline tracking helps businesses stay ahead in competitive markets.",
+    ],
+    linkText: "Get Free Trial",
+    linkHref: "/contact",
+    imageUrl: "/featureImg/image3.png",
+  },
+  {
     buttonText: "Business Intelligence",
     title: "Custom Analysis & Performance Tracking",
    description: [
@@ -24,16 +34,7 @@ const carouselItemsData = [
     linkHref: "/contact",
     imageUrl: "/featureImg/image2.png",
   },
-  {
-    buttonText: "Customer Relationship Management",
-    title: "Work smarter through strategic prioritization",
-    description: [
-      "ERP provides a visual representation of ongoing sales deals and revenue forecasts. Sales teams can monitor opportunities, set targets, and improve closing rates. Pipeline tracking helps businesses stay ahead in competitive markets.",
-    ],
-    linkText: "Get Free Trial",
-    linkHref: "/contact",
-    imageUrl: "/featureImg/image3.png",
-  },
+  
   {
      buttonText: "Production Planning",
      title: "Production Scheduling & Work Order Management",
@@ -42,7 +43,7 @@ const carouselItemsData = [
     ],
      linkText: "Learn More",
      linkHref: "/contact",
-     imageUrl: "/featureImg/image4.png",
+     imageUrl: "/featureImg/image1.png",
    },
    {
     buttonText: "Human Resource Management",
@@ -52,7 +53,7 @@ const carouselItemsData = [
     ],
     linkText: "Get Free Trial",
     linkHref: "/contact",
-    imageUrl: "/featureImg/image1.png",
+    imageUrl: "/featureImg/image5.png",
   },
 ];
 

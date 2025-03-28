@@ -58,7 +58,7 @@ export default function HeroSection() {
   
         {/* Image Section with Flex */}
         <div className="flex justify-center z-10 items-center w-full px-2 sm:px-2 md:px-2 max-w-6xl mt-6 md:mt-auto">
-          <img src="/header.png" alt="Header Illustration" className="w-full h-auto" />
+          <img src="/header.jpg" alt="Header Illustration" className="w-full h-auto" />
         </div>
       </div>
     )
